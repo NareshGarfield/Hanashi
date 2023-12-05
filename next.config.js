@@ -1,19 +1,24 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    experimental: {
-        externalDir: true,
-        swcPlugins: [
-            ["next-superjson-plugin",{}]
-        ]
+module.exports = {
+    reactStrictMode: true,
+    images: {
+      domains: [
+        "res.cloudinary.com",
+        "avatars.githubusercontent.com",
+        "lh3.googleusercontent.com",
+        "i.pinimg.com"
+      ]
     },
-    images : {
-        domains: [
-            "res.cloudinary.com",
-            "avatars.githubusercontent.com",
-            "lh3.googleusercontent.com",
-            "i.pinimg.com"
-        ]
+    async headers() {
+      return [
+        {
+          source: '/(.*)',
+          headers: [
+            {
+              key: 'Pooz',
+              value: 'Hanashi'
+            }
+          ]
+        }
+      ]
     }
-}
-
-module.exports = nextConfig
+  };
