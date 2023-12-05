@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-        appDir: true,
+        externalDir: true,
         swcPlugins: [
             ["next-superjson-plugin",{}]
         ]
@@ -11,8 +11,6 @@ const nextConfig = {
             "res.cloudinary.com",
             "avatars.githubusercontent.com",
             "lh3.googleusercontent.com",
-            "pinterest.com",
-            "sketchok.com",
             "i.pinimg.com"
         ]
     }
